@@ -1,37 +1,39 @@
 import React from 'react';
 import CategoryList from './components/categories/categories.components';
+import Directory from './components/directory/directory.component';
 
 const App = () => {
   const category = [
     {
       id: 1,
-      title: 'Hats'
+      title: 'Hats',
+      imageUrl: 'https://i.ibb.co/cvpntL1/hats.png'
     },
     {
       id: 2,
-      title: 'Jackets'
+      title: 'Jackets',
+      imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png'
     },
     {
       id: 3,
-      title: 'Shoes'
+      title: 'Sneakers',
+      imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png'
     },
     {
       id: 4,
-      title: 'Men'
+      title: 'Womens',
+      imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png'
     },
     {
       id: 5,
-      title: 'Women'
+      title: 'Mens',
+      imageUrl: 'https://i.ibb.co/R70vBrQ/men.png'
     }
   ];
-  console.log(category);
+
   return (
     <div>
-      <div className="Categories-container">
-        {category.map((category) => {
-          return <CategoryList key={category.id} title={category.title} />;
-        })}
-      </div>
+      <Directory categoryDir={category} />
     </div>
   );
 };
